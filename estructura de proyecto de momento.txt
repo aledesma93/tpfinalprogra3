@@ -1,0 +1,28 @@
+Progra3_TPFinal_19B/
+├─ Controllers/
+│  ├─ HomeController.cs
+│  ├─ IncidentsController.cs
+│  ├─ CustomersController.cs
+│  ├─ SupervisorController.cs
+│  └─ AdminController.cs
+├─ Views/
+│  ├─ _ViewImports.cshtml
+│  ├─ _ViewStart.cshtml
+│  ├─ Shared/_Layout.cshtml
+│  ├─ Home/
+│  │  ├─ Index.cshtml
+│  │  └─ About.cshtml
+│  ├─ Incidents/
+│  │  ├─ Index.cshtml
+│  │  ├─ Details.cshtml
+│  │  ├─ Create.cshtml
+│  │  ├─ Resolve.cshtml
+│  │  ├─ Close.cshtml
+│  │  └─ Reassign.cshtml
+│  ├─ Customers/
+│  │  ├─ Index.cshtml
+│  │  └─ Create.cshtml
+│  └─ Supervisor/
+│     └─ Board.cshtml
+└─ wwwroot/
+   └─ css/site.css

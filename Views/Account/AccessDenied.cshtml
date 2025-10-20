@@ -1,0 +1,13 @@
+﻿@* Views/Account/AccessDenied.cshtml *@
+@{
+    ViewData["Title"] = "Acceso denegado";
+}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="alert alert-warning shadow-sm">
+            <h5 class="alert-heading">Acceso denegado</h5>
+            <p>No tenés permisos para acceder a esta sección.</p>
+            <a asp-controller="Home" asp-action="Index" class="btn btn-outline-secondary">Volver al inicio</a>
+        </div>
+    </div>
+</div>

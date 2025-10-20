@@ -1,0 +1,36 @@
+﻿@* Views/Home/Index.cshtml *@
+@{
+    ViewData["Title"] = "Inicio";
+}
+<div class="row g-4">
+    <div class="col-md-4">
+        <a asp-controller="Incidents" asp-action="Create" class="text-decoration-none">
+            <div class="card card-hover h-100">
+                <div class="card-body">
+                    <h5 class="card-title">➕ Nueva Incidencia</h5>
+                    <p class="text-muted mb-0">Registrar un reclamo y enviar confirmación por email.</p>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-4">
+        <a asp-controller="Incidents" asp-action="Index" class="text-decoration-none">
+            <div class="card card-hover h-100">
+                <div class="card-body">
+                    <h5 class="card-title">📋 Mis Incidencias</h5>
+                    <p class="text-muted mb-0">Listado, filtros rápidos y detalle.</p>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-4">
+        <a asp-controller="Supervisor" asp-action="Board" class="text-decoration-none">
+            <div class="card card-hover h-100">
+                <div class="card-body">
+                    <h5 class="card-title">🗂️ Tablero (Supervisor)</h5>
+                    <p class="text-muted mb-0">Visualizar y reasignar incidencias.</p>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+﻿@* Views/Customers/Index.cshtml *@
+@{
+    ViewData["Title"] = "Clientes";
+}
+<div class="d-flex align-items-center justify-content-between mb-3">
+    <h2 class="mb-0">Clientes</h2>
+    <a asp-action="Create" class="btn btn-primary">Nuevo cliente</a>
+</div>
+
+<div class="card mb-3">
+    <div class="card-body">
+        <form class="row g-2">
+            <div class="col-sm-4">
+                <input class="form-control" placeholder="Buscar por nombre o documento..." />
+            </div>
+            <div class="col-sm-2 d-grid">
+                <button class="btn btn-outline-secondary">Buscar</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="row g-3">
+    @for (int i = 1; i <= 6; i++)
+    {
+        <div class="col-md-4">
+            <div class="card card-hover h-100">
+                <div class="card-body">
+                    <h5 class="card-title mb-1">Cliente @i</h5>
+                    <div class="text-muted small mb-2">CUIT 20-1234567@i-9</div>
+                    <div class="mb-2">cliente@demo.com</div>
+                    <a asp-controller="Incidents" asp-action="Create" class="btn btn-sm btn-outline-primary">Nueva incidencia</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>

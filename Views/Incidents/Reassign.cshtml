@@ -1,0 +1,27 @@
+﻿@* Views/Incidents/Reassign.cshtml *@
+@{
+    ViewData["Title"] = "Reasignar Incidencia";
+}
+<div class="card">
+    <div class="card-header bg-light">Reasignar INC-2025-00123</div>
+    <div class="card-body">
+        <form class="row g-3">
+            <div class="col-md-6">
+                <label class="form-label">Asignar a</label>
+                <select class="form-select">
+                    <option>Telefonista 1</option>
+                    <option>Telefonista 2</option>
+                    <option>Telefonista 3</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Motivo</label>
+                <input class="form-control" placeholder="Ej: carga de trabajo, especialidad..." />
+            </div>
+            <div class="col-12 d-flex gap-2">
+                <button class="btn btn-warning">Reasignar</button>
+                <a asp-action="Details" asp-route-id="123" class="btn btn-outline-secondary">Cancelar</a>
+            </div>
+        </form>
+    </div>
+</div>

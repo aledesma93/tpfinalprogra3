@@ -1,0 +1,26 @@
+﻿@* Views/Supervisor/Board.cshtml *@
+@{
+    ViewData["Title"] = "Tablero (Supervisor)";
+    var estados = new[] { "Abierto", "Asignado", "En Análisis", "Resuelto", "Cerrado", "Reabierto" };
+}
+<h2 class="mb-3">Tablero de Incidencias</h2>
+<div class="kanban">
+    @foreach (var e in estados)
+    {
+        <div class="kanban-col">
+            <h6 class="mb-2">@e <span class="badge text-bg-light">3</span></h6>
+            @for (int i = 1; i <= 3; i++)
+            {
+                <div class="card card-hover mb-2">
+                    <div class="card-body py-2">
+                        <div class="d-flex justify-content-between">
+                            <a class="fw-semibold text-decoration-none" asp-controller="Incidents" asp-action="Details" asp-route-id="@i">INC-2025-@i.ToString("000")</a>
+                            <span class="badge text-bg-danger">Alta</span>
+                        </div>
+                        <div class="small text-muted">Cliente @i • Telefonista @((i % 3) + 1)</div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</div>

@@ -1,0 +1,72 @@
+﻿@* Views/Incidents/Details.cshtml *@
+@{
+    ViewData["Title"] = "Detalle Incidencia";
+}
+<div class="row g-3">
+    <div class="col-lg-8">
+        <div class="card incident-card">
+            <div class="card-body">
+                <div class="d-flex justify-content-between">
+                    <h4 class="mb-0">INC-2025-00123</h4>
+                    <div>
+                        <span class="badge text-bg-secondary badge-state">Abierto</span>
+                        <span class="badge text-bg-danger">Alta</span>
+                    </div>
+                </div>
+                <p class="text-muted mb-1">Cliente: <a asp-controller="Customers" asp-action="Details" asp-route-id="1">Acme S.A.</a></p>
+                <p class="text-muted">Tipo: Soporte • Asignado a: <a href="#">Telefonista 1</a></p>
+                <hr />
+                <h6>Problemática</h6>
+                <p>El sistema se cierra al generar el reporte mensual.</p>
+                <div class="d-flex gap-2 mt-3">
+                    <a class="btn btn-outline-primary btn-sm" asp-action="Edit" asp-route-id="123">Modificar</a>
+                    <a class="btn btn-outline-success btn-sm" asp-action="Resolve" asp-route-id="123">Resolver</a>
+                    <a class="btn btn-outline-dark btn-sm" asp-action="Close" asp-route-id="123">Cerrar Incidencia</a>
+                    <a class="btn btn-outline-warning btn-sm" asp-action="Reassign" asp-route-id="123">Reasignar</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mt-3">
+            <div class="card-header bg-light">Comentarios</div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <div class="small text-muted">hoy 10:33 • por Telefonista 1</div>
+                    <div>Se solicitó más información al cliente.</div>
+                </div>
+                <div class="mb-3">
+                    <div class="small text-muted">ayer 17:12 • por Supervisor</div>
+                    <div>Reasignado a Telefonista 1.</div>
+                </div>
+                <form class="mt-3">
+                    <div class="input-group">
+                        <input class="form-control" placeholder="Escribir un comentario..." />
+                        <button class="btn btn-primary">Agregar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="card mt-3">
+            <div class="card-header bg-light">Historial</div>
+            <div class="card-body small">
+                <ul class="list-unstyled mb-0">
+                    <li>Abierto • 18/10/2025 • por Telefonista 1</li>
+                    <li>Asignado • 19/10/2025 • por Supervisor</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4">
+        <div class="card">
+            <div class="card-header bg-light">Acciones rápidas</div>
+            <div class="card-body">
+                <a class="btn btn-outline-secondary w-100 mb-2" asp-action="Edit" asp-route-id="123">Editar</a>
+                <a class="btn btn-outline-success w-100 mb-2" asp-action="Resolve" asp-route-id="123">Resolver</a>
+                <a class="btn btn-outline-dark w-100 mb-2" asp-action="Close" asp-route-id="123">Cerrar</a>
+                <a class="btn btn-outline-warning w-100" asp-action="Reassign" asp-route-id="123">Reasignar</a>
+            </div>
+        </div>
+    </div>
+</div>

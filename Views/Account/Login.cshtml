@@ -1,0 +1,50 @@
+﻿@* Views/Account/Login.cshtml *@
+@{
+    ViewData["Title"] = "Iniciar sesión";
+    var returnUrl = (string?)ViewData["ReturnUrl"];
+}
+<div class="row justify-content-center">
+    <div class="col-md-6 col-lg-5">
+        <div class="card shadow-sm">
+            <div class="card-body p-4">
+                <h3 class="mb-3 text-center">Iniciar sesión</h3>
+
+                @if (TempData["RegisterOk"] is string ok)
+                {
+                    <div class="alert alert-success" role="alert">@ok</div>
+                }
+
+                <form asp-action="Login" method="post" novalidate>
+                    @Html.AntiForgeryToken()
+                    <input type="hidden" name="returnUrl" value="@returnUrl" />
+                    <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="email">Email</label>
+                        <input id="email" name="email" type="email" class="form-control" required />
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label" for="password">Contraseña</label>
+                        <input id="password" name="password" type="password" class="form-control" required />
+                    </div>
+
+                    <div class="mb-3 form-check">
+                        <input name="rememberMe" type="checkbox" class="form-check-input" id="rememberMe">
+                        <label class="form-check-label" for="rememberMe">Recordarme</label>
+                    </div>
+
+                    <button class="btn btn-primary w-100" type="submit">Ingresar</button>
+                </form>
+
+                <div class="text-center mt-3">
+                    <a asp-action="Register" asp-route-returnUrl="@returnUrl">¿No tenés cuenta? Registrate</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

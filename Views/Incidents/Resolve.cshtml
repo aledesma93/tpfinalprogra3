@@ -1,0 +1,19 @@
+﻿@* Views/Incidents/Resolve.cshtml *@
+@{
+    ViewData["Title"] = "Resolver Incidencia";
+}
+<div class="card">
+    <div class="card-header bg-light">Resolver INC-2025-00123</div>
+    <div class="card-body">
+        <form class="row g-3">
+            <div class="col-12">
+                <label class="form-label">Nota de resolución</label>
+                <textarea class="form-control" rows="5" placeholder="Detalle de la solución aplicada..."></textarea>
+            </div>
+            <div class="col-12 d-flex gap-2">
+                <button class="btn btn-success">Resolver</button>
+                <a asp-action="Details" asp-route-id="123" class="btn btn-outline-secondary">Volver</a>
+            </div>
+        </form>
+    </div>
+</div>

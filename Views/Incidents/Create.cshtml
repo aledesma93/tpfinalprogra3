@@ -1,0 +1,43 @@
+﻿@* Views/Incidents/Create.cshtml *@
+@{
+    ViewData["Title"] = "Nueva Incidencia";
+}
+<div class="card">
+    <div class="card-header bg-light">Nueva Incidencia</div>
+    <div class="card-body">
+        <form class="row g-3">
+            <div class="col-md-6">
+                <label class="form-label">Cliente</label>
+                <div class="input-group">
+                    <input class="form-control" placeholder="Buscar cliente..." />
+                    <button class="btn btn-outline-secondary">Buscar</button>
+                </div>
+                <div class="form-text">o <a asp-controller="Customers" asp-action="Create">crear nuevo cliente</a></div>
+            </div>
+            <div class="col-md-3">
+                <label class="form-label">Tipo</label>
+                <select class="form-select">
+                    <option>Soporte</option>
+                    <option>Administrativo</option>
+                    <option>Comercial</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <label class="form-label">Prioridad</label>
+                <select class="form-select">
+                    <option>Alta</option>
+                    <option>Media</option>
+                    <option>Baja</option>
+                </select>
+            </div>
+            <div class="col-12">
+                <label class="form-label">Problemática</label>
+                <textarea class="form-control" rows="5" placeholder="Describí el problema..."></textarea>
+            </div>
+            <div class="col-12 d-flex gap-2">
+                <button class="btn btn-primary">Guardar</button>
+                <a asp-action="Index" class="btn btn-outline-secondary">Cancelar</a>
+            </div>
+        </form>
+    </div>
+</div>

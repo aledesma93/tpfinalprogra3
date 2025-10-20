@@ -1,0 +1,20 @@
+﻿@* Views/Incidents/Close.cshtml *@
+@{
+    ViewData["Title"] = "Cerrar Incidencia";
+}
+<div class="card">
+    <div class="card-header bg-light">Cerrar INC-2025-00123</div>
+    <div class="card-body">
+        <form class="row g-3">
+            <div class="col-12">
+                <label class="form-label">Comentario final de cierre</label>
+                <textarea class="form-control" rows="5" placeholder="Motivo de cierre..."></textarea>
+                <div class="form-text">Campo obligatorio.</div>
+            </div>
+            <div class="col-12 d-flex gap-2">
+                <button class="btn btn-dark">Cerrar</button>
+                <a asp-action="Details" asp-route-id="123" class="btn btn-outline-secondary">Volver</a>
+            </div>
+        </form>
+    </div>
+</div>
